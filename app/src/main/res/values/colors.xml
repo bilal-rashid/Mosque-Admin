@@ -3,4 +3,16 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorGray">#aeaeae</color>
+    <color name="colorGrayLight">#e0e0e0</color>
+
+    <color name="grayDark">#5a5656</color>
+    <color name="gray">#646464</color>
+    <color name="graylight">#979797</color>
+    <color name="grayLightExtra">#c9c9c9</color>
+    <color name="accent">#FF9800</color>
+    <color name="accentlight">#FFAD33</color>
+    <color name="button">#d1d1d1</color>
+    <color name="buttonGradientDark">#b0afaf</color>
+    <color name="buttonGradientLight">#fcfcfc</color>
 </resources>

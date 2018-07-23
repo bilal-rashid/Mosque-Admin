@@ -14,4 +14,5 @@ public class Mosque {
     public String isha;
     public String juma;
     public String eid;
+    public String last_updated;
 }
