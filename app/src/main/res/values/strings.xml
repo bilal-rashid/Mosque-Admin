@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Namaz Timings</string>
+    <string name="app_name">Masjid Tauheed Admin</string>
     <string name="mosque_name">Namaz Timings</string>
     <string name="mosque_name_bold"><b>Masjid Tauheed</b></string>
 </resources>

@@ -6,218 +6,246 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.islamabad.timing.namaztimings.SplashActivity">
-
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@color/colorGrayLight"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_weight="1">
-        <TextView
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textSize="21sp"
-            android:text="@string/mosque_name_bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textSize="12sp"
-            android:text="Update prayer timings online"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/grayDark"></View>
-
-    <ScrollView
-        android:layout_weight="9"
-        android:layout_width="match_parent"
-        android:layout_height="0dp">
+        android:layout_height="match_parent">
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorGray"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:gravity="right"
-                    android:text="Fajar"
-                    android:layout_gravity="center"
-                    android:textSize="21sp" />
-
-                <TimePicker
-                    android:id="@+id/timePicker_fajar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:timePickerMode="spinner" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:background="@color/colorGrayLight"
-                android:orientation="horizontal">
-
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:gravity="right"
-                    android:text="Zohar"
                     android:layout_gravity="center"
-                    android:textSize="21sp" />
-
-                <TimePicker
-                    android:id="@+id/timePicker_zohar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:timePickerMode="spinner" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorGray"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:gravity="right"
-                    android:text="Asar"
-                    android:layout_gravity="center"
-                    android:textSize="21sp" />
-
-                <TimePicker
-                    android:id="@+id/timePicker_asar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:timePickerMode="spinner" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorGrayLight"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:gravity="right"
-                    android:text="Magrib"
-                    android:layout_gravity="center"
-                    android:textSize="21sp" />
-
-                <TimePicker
-                    android:id="@+id/timePicker_magrib"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:timePickerMode="spinner" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorGray"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:gravity="right"
-                    android:text="Isha"
-                    android:layout_gravity="center"
-                    android:textSize="21sp" />
-
-                <TimePicker
-                    android:id="@+id/timePicker_isha"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:timePickerMode="spinner" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorGrayLight"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:gravity="right"
-                    android:text="Juma"
-                    android:layout_gravity="center"
-                    android:textSize="21sp" />
-
-                <TimePicker
-                    android:id="@+id/timePicker_juma"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:timePickerMode="spinner" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorGray"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:gravity="right"
-                    android:text="Eid"
-                    android:layout_gravity="center"
-                    android:textSize="21sp" />
-
-                <TimePicker
-                    android:id="@+id/timePicker_eid"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:timePickerMode="spinner" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorGrayLight"
-                android:orientation="horizontal">
-                <Button
-                    android:id="@+id/save_btn"
+                    android:gravity="center"
+                    android:textSize="21sp"
+                    android:text="@string/mosque_name_bold"
                     android:layout_width="match_parent"
-                    android:background="@drawable/button_background"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginTop="8dp"
-                    android:textSize="11sp"
-                    android:text="Save Timings" />
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:text="Update prayer timings online"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
             </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grayDark"></View>
+
+            <ScrollView
+                android:layout_weight="9"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorGray"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="right"
+                            android:text="Fajar"
+                            android:layout_gravity="center"
+                            android:textSize="21sp" />
+
+                        <TimePicker
+                            android:id="@+id/timePicker_fajar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:timePickerMode="spinner" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorGrayLight"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="right"
+                            android:text="Zohar"
+                            android:layout_gravity="center"
+                            android:textSize="21sp" />
+
+                        <TimePicker
+                            android:id="@+id/timePicker_zohar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:timePickerMode="spinner" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorGray"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="right"
+                            android:text="Asar"
+                            android:layout_gravity="center"
+                            android:textSize="21sp" />
+
+                        <TimePicker
+                            android:id="@+id/timePicker_asar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:timePickerMode="spinner" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorGrayLight"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="right"
+                            android:text="Magrib"
+                            android:layout_gravity="center"
+                            android:textSize="21sp" />
+
+                        <TimePicker
+                            android:id="@+id/timePicker_magrib"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:timePickerMode="spinner" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorGray"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="right"
+                            android:text="Isha"
+                            android:layout_gravity="center"
+                            android:textSize="21sp" />
+
+                        <TimePicker
+                            android:id="@+id/timePicker_isha"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:timePickerMode="spinner" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorGrayLight"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="right"
+                            android:text="Juma"
+                            android:layout_gravity="center"
+                            android:textSize="21sp" />
+
+                        <TimePicker
+                            android:id="@+id/timePicker_juma"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:timePickerMode="spinner" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorGray"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="right"
+                            android:text="Eid"
+                            android:layout_gravity="center"
+                            android:textSize="21sp" />
+
+                        <TimePicker
+                            android:id="@+id/timePicker_eid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:timePickerMode="spinner" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorGrayLight"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/save_btn"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/button_background"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginTop="8dp"
+                            android:textSize="11sp"
+                            android:text="Save Timings" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
 
         </LinearLayout>
+        <LinearLayout
+            android:id="@+id/loader"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:background="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/loading_text"
+                android:textSize="13sp"
+                android:text="Loading..."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-    </ScrollView>
+        </LinearLayout>
+    </FrameLayout>
 
 
 </LinearLayout>

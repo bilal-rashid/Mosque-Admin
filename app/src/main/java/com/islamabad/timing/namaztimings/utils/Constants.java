@@ -5,7 +5,8 @@ package com.islamabad.timing.namaztimings.utils;
  */
 
 public class Constants {
-    public static final String FRAGMENT_NAME = "fragment name";
+    public static final String MOSQUE_ID = "1";
+    public static final String MOSQUE_NAME = "Masjid Tauheed";
     public static final String DATA = "data";
     public static final String PACKET_DATA = "packet_data";
     public static final String USER= "user";
@@ -23,7 +24,7 @@ public class Constants {
     public static final long INTERVAL = 1000 * 60 * 60;
     public static final long ADMIN_INTERVAL = 1000 * 60 * 1;
     public static final String GUARD_DATA = "guard_data";
-    public static final String DATE_FORMAT = "yyyy-MM-dd HH:mm";
+    public static final String DATE_FORMAT = "dd-MMM-yyyy hh:mm a";
     public static final String DB_ID = "db_id";
     public static final String LAST_LOCATION = "last_location";
 
