@@ -168,6 +168,7 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
 
                 }
                 mosque.name= Constants.MOSQUE_NAME;
+                mosque.location= Constants.MOSQUE_LOCATION;
                 mDatabase.child(Constants.MOSQUE_ID).setValue(mosque).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
