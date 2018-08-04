@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 /**
  * Created by Bilal Rashid on 7/24/2018.
@@ -21,6 +22,14 @@ public class AppUtils {
     public static String getDateAndTime(){
         Calendar c = Calendar.getInstance();
         SimpleDateFormat df = new SimpleDateFormat(Constants.DATE_FORMAT);
+        return df.format(c.getTime());
+    }
+    public static String getMosqueTime(String time){
+        Calendar c = Calendar.getInstance();
+        int hour = Integer.parseInt(time.split(":")[0]);
+        int minute = Integer.parseInt(time.split(":")[1]);
+        c.set(2000,12,12,hour,minute);
+        SimpleDateFormat df = new SimpleDateFormat(Constants.TIME_FORMAT);
         return df.format(c.getTime());
     }
     public static boolean isInternetAvailable(final Context context) {
