@@ -68,13 +68,6 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
         loader = (LinearLayout) findViewById(R.id.loader);
         loadingText = (TextView) findViewById(R.id.loading_text);
         buttonSave.setOnClickListener(this);
-        buttonSave.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                showLoader("Saving...");
-                return false;
-            }
-        });
         mDatabase = FirebaseDatabase.getInstance().getReference();
         hideLoader();
         if (AppUtils.isInternetAvailable(getApplicationContext())) {
