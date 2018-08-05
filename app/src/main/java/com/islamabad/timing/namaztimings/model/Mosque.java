@@ -17,6 +17,8 @@ public class Mosque {
     public String juma;
     public String eid;
     public String last_updated;
+    public String id;
+    public String notes;
 
     @Override
     public boolean equals(Object obj) {
@@ -26,6 +28,7 @@ public class Mosque {
                 mosque.asar.equals(this.asar) &&
                 mosque.magrib.equals(this.magrib) &&
                 mosque.isha.equals(this.isha) &&
+                mosque.notes.equals(this.notes) &&
                 mosque.juma.equals(this.juma) &&
                 mosque.eid.equals(this.eid) ){
             return true;
@@ -62,6 +65,9 @@ public class Mosque {
         if(!mosque.eid.equals(this.eid)){
             result = result+"Eid Time Changed to "
                     +AppUtils.getMosqueTime(mosque.eid)+"\n";
+        }
+        if(!mosque.notes.equals(this.notes)){
+            result = result+mosque.notes+"\n";
         }
         return result;
     }

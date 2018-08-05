@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -29,11 +30,7 @@ import com.islamabad.timing.namaztimings.model.Notification;
 import com.islamabad.timing.namaztimings.utils.AppUtils;
 import com.islamabad.timing.namaztimings.utils.Constants;
 
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -51,6 +48,7 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
     TimePicker timePickerJuma;
     TimePicker timePickerEid;
     TextView loadingText;
+    EditText notes;
     LinearLayout loader;
     Mosque globalMosque;
 
@@ -66,6 +64,7 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
         timePickerIsha = (TimePicker) findViewById(R.id.timePicker_isha);
         timePickerJuma = (TimePicker) findViewById(R.id.timePicker_juma);
         timePickerEid = (TimePicker) findViewById(R.id.timePicker_eid);
+        notes = (EditText) findViewById(R.id.edit_text_notes);
         loader = (LinearLayout) findViewById(R.id.loader);
         loadingText = (TextView) findViewById(R.id.loading_text);
         buttonSave.setOnClickListener(this);
@@ -121,6 +120,7 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
                         timePickerEid.setCurrentHour(Integer.parseInt(mosque.eid.split(":")[0]));
                         timePickerEid.setCurrentMinute(Integer.parseInt(mosque.eid.split(":")[1]));
                     }
+                    notes.setText(""+mosque.notes);
                 }
             }
 
@@ -192,6 +192,8 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
                 }
                 mosque.name = Constants.MOSQUE_NAME;
                 mosque.location = Constants.MOSQUE_LOCATION;
+                mosque.id = Constants.MOSQUE_ID;
+                mosque.notes = notes.getText().toString();
                 if(globalMosque!=null) {
                     if (!globalMosque.equals(mosque)) {
                         mDatabase.child(Constants.MOSQUE_ID).setValue(mosque).addOnCompleteListener(new OnCompleteListener<Void>() {

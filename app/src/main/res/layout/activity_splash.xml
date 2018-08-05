@@ -208,6 +208,20 @@
                         android:layout_height="wrap_content"
                         android:background="@color/colorGrayLight"
                         android:orientation="horizontal">
+                        <EditText
+                            android:id="@+id/edit_text_notes"
+                            android:hint="Additional Notes"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:imeOptions="actionDone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorGray"
+                        android:orientation="horizontal">
                         <Button
                             android:id="@+id/save_btn"
                             android:layout_width="match_parent"
