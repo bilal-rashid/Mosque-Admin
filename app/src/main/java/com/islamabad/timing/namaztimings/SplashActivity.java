@@ -192,13 +192,32 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
                 }
                 mosque.name = Constants.MOSQUE_NAME;
                 mosque.location = Constants.MOSQUE_LOCATION;
-                if(!globalMosque.equals(mosque)) {
+                if(globalMosque!=null) {
+                    if (!globalMosque.equals(mosque)) {
+                        mDatabase.child(Constants.MOSQUE_ID).setValue(mosque).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                AppUtils.makeToast(SplashActivity.this, "Updated Successfully");
+                                showLoader("Sending Notification...");
+                                sendNotification(mosque);
+
+                            }
+                        });
+                        if (!AppUtils.isInternetAvailable(getApplicationContext())) {
+                            AppUtils.makeToast(SplashActivity.this, "Timings will update when internet is available");
+                            finish();
+                        }
+                    } else {
+                        hideLoader();
+                        AppUtils.makeToast(getApplicationContext(), "Nothing Changed");
+                    }
+                }else {
                     mDatabase.child(Constants.MOSQUE_ID).setValue(mosque).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             AppUtils.makeToast(SplashActivity.this, "Updated Successfully");
                             showLoader("Sending Notification...");
-                            sendNotification(mosque);
+                            sendNotificationToAll();
 
                         }
                     });
@@ -206,13 +225,38 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
                         AppUtils.makeToast(SplashActivity.this, "Timings will update when internet is available");
                         finish();
                     }
-                }else {
-                    hideLoader();
-                    AppUtils.makeToast(getApplicationContext(),"Nothing Changed");
+
                 }
                 break;
         }
 
+    }
+
+    private void sendNotificationToAll() {
+        ApiInterface apiService =
+                ApiClient.getClient().create(ApiInterface.class);
+        Notification request = new Notification();
+        request.app_id="a5e83790-9b65-4ccb-80eb-9cb27c809b58";
+        request.contents=new Contents();
+        request.contents.en="New Mosque Added\n"+Constants.MOSQUE_NAME;
+        request.data = new Data();
+        request.data.data="data";
+        request.included_segments=new ArrayList<>();
+        request.included_segments.add("All");
+        Call<Object> call = apiService.postPackets(request);
+        call.enqueue(new Callback<Object>() {
+            @Override
+            public void onResponse(Call<Object> call, Response<Object> response) {
+                hideLoader();
+                finish();
+            }
+
+            @Override
+            public void onFailure(Call<Object> call, Throwable t) {
+                Log.d("TAAAG", "" + t.getMessage());
+
+            }
+        });
     }
 
     public void sendNotification(Mosque mosque) {
