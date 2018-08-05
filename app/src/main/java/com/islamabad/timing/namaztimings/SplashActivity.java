@@ -72,6 +72,9 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
         hideLoader();
         if (AppUtils.isInternetAvailable(getApplicationContext())) {
             showLoader("Getting Current Timings");
+        }else {
+            AppUtils.makeToast(this,"Network not available");
+            finish();
         }
         mDatabase.child(Constants.MOSQUE_ID).addValueEventListener(new ValueEventListener() {
             @Override
