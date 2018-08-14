@@ -162,7 +162,6 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View view) {
-        OneSignal.sendTag("mosque",Constants.MOSQUE_ID);
         final Mosque mosque = new Mosque();
         switch (view.getId()) {
             case R.id.save_btn:
@@ -206,6 +205,8 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
                         if (!AppUtils.isInternetAvailable(getApplicationContext())) {
                             AppUtils.makeToast(SplashActivity.this, "Timings will update when internet is available");
                             finish();
+                        }else {
+                            OneSignal.sendTag("mosque",Constants.MOSQUE_ID);
                         }
                     } else {
                         hideLoader();
@@ -224,6 +225,8 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
                     if (!AppUtils.isInternetAvailable(getApplicationContext())) {
                         AppUtils.makeToast(SplashActivity.this, "Timings will update when internet is available");
                         finish();
+                    }else {
+                        OneSignal.sendTag("mosque",Constants.MOSQUE_ID);
                     }
 
                 }
