@@ -29,6 +29,7 @@ import com.islamabad.timing.namaztimings.model.Mosque;
 import com.islamabad.timing.namaztimings.model.Notification;
 import com.islamabad.timing.namaztimings.utils.AppUtils;
 import com.islamabad.timing.namaztimings.utils.Constants;
+import com.onesignal.OneSignal;
 
 import java.util.ArrayList;
 
@@ -161,6 +162,7 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View view) {
+        OneSignal.sendTag("mosque",Constants.MOSQUE_ID);
         final Mosque mosque = new Mosque();
         switch (view.getId()) {
             case R.id.save_btn:

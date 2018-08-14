@@ -1,3 +1,16 @@
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/'}
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.11.0, 0.99.99]'
+    }
+}
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+repositories {
+    maven { url 'https://maven.google.com' }
+}
 apply plugin: 'com.android.application'
 
 android {
@@ -9,6 +22,11 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                onesignal_app_id: '8f31114a-5b6f-4769-b106-52c5574f4712',
+                // Project number pulled from dashboard, local value is ignored.
+                onesignal_google_project_number: '227266176094'
+        ]
     }
     buildTypes {
         release {
@@ -28,5 +46,6 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.2.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+    implementation 'com.onesignal:OneSignal:[3.9.1, 3.99.99]'
 }
 apply plugin: 'com.google.gms.google-services'

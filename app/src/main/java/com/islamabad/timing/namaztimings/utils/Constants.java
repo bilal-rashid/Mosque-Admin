@@ -5,9 +5,9 @@ package com.islamabad.timing.namaztimings.utils;
  */
 
 public class Constants {
-    public static final String MOSQUE_ID = "1";
-    public static final String MOSQUE_NAME = "Masjid Tauheed";
-    public static final String MOSQUE_LOCATION = "33.677007:73.026156";
+    public static final String MOSQUE_ID = "5";
+    public static final String MOSQUE_NAME = "Masjid Minar-ul-Huda";
+    public static final String MOSQUE_LOCATION = "33.676484:72.998938";
     public static final String DATA = "data";
     public static final String PACKET_DATA = "packet_data";
     public static final String USER= "user";
